@@ -1,0 +1,17 @@
+/* Hero Section */
+div.hero {
+	height:100vh;
+	position: relative;
+	padding-top: 5%;
+	padding-bottom: 5%;
+    margin-bottom: 5px;
+}
+
+.section-hero {
+    height: 100vh;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative;
+    background-color: cyan;
+}
