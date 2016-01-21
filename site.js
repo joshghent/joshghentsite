@@ -13,4 +13,5 @@ $(document).ready(function(){
     $('#skill_javascript').animate({width: '60%'}, 250);
     $('#skill_html').animate({width: '70%'}, 250);
     $('#skill_css').animate({width: '45%'}, 250);
+    $('#skill_sql').animate({width: '30%'}, 250);
 });
