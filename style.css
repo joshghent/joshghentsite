@@ -15,3 +15,8 @@ div.hero {
     position: relative;
     background-color: cyan;
 }
+
+#contact_links {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
