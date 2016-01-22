@@ -73,6 +73,14 @@ button.blue-background:hover {
     background-color: #01B7FF;
 }
 
+span.card-title-background {
+    opacity: 0.9;
+    background-color: #01B7FF;
+    padding: 10px !important;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
 /* Taken from MaterializeCSS docs to change the color of inputs */
 
 

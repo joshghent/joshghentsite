@@ -83,6 +83,7 @@ function create_portfolio_items(obj){
     portfolioCardTitleEl.classList.add('card-title');
     portfolioCardTitleEl.classList.add('grey-text');
     portfolioCardTitleEl.classList.add('text-darken-4');
+    portfolioCardTitleEl.classList.add('card-title-background');
     portfolioCardTitleEl.innerHTML = obj.name;
     
     // Creates the description container
