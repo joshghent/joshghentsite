@@ -26,7 +26,7 @@ div.hero {
 }
 
 .portfolio-section {
-    height: 100vh
+    height: 100vh;
 }
 
 img.header-img {
@@ -36,4 +36,9 @@ img.header-img {
 
 #navbar {
     background-color: #01B7FF;
+}
+
+.about-section {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
