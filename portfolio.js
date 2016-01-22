@@ -24,7 +24,7 @@ END RESULT
 */
 
 fridgemagnets = {
-    name: "Fridge Magnets in the Browser",
+    name: "Fridge Magnets",
     item_image: "images/fridgejs.png",
     description: "Designed to emulate fridge magnets in your browser. This project was made as a small note keeper. It taught me many new ways of dynamically creating content based on user input, a skill used in most modern web applications."
 };
