@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav({
+        closeOnClick: true
+    });
     
     var year_obj = new Date();
     var current_year = year_obj.getFullYear();
