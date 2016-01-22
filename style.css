@@ -12,7 +12,7 @@ div.hero {
     padding-top: 5%;
     padding-bottom: 5%;
     position: relative;
-    background-color: cyan;
+    background-color: powderblue;
 }
 
 #contact_links {
@@ -27,4 +27,13 @@ div.hero {
 
 .portfolio-section {
     height: 100vh
+}
+
+img.header-img {
+    display: block;
+    margin: 0 auto;
+}
+
+#navbar {
+    background-color: #01B7FF;
 }
