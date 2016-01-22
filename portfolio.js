@@ -22,13 +22,47 @@ END RESULT
           </div>
         </div>
 */
+
+fridgemagnets = {
+    name: "Fridge Magnets in the Browser",
+    item_image: "../images/fridgejs.png",
+    description: "Designed to emulate fridge magnets in your browser. This project was made as a small note keeper. It taught me many new ways of dynamically creating content based on user input, a skill used in most modern web applications."
+};
+marid = {
+    name: "Marid",
+    item_image: "../images/marid.png",
+    description: "This project was done in colaboration with 2 other people and had me tasked with designing the front-end. Marid was purposed as a way of connecting artists with engineers and producers, as well as building audiences for new artists. It taught me lessons in working as a team as well as designing easy to use interfaces."
+};
+randomquotegenerator = {
+    name: "Random Quote Machine",
+    item_image: "../images/randomquotegenerator.png",
+    description: "The Random Quote Machine was done as part of course work for the FreeCodeCamp course. I learned a vast amount about working with API's and building a application from a given specification."
+};
+tictactoe = {
+    name: "Tic Tac Toe",
+    item_image: "../images/tictactoe.png",
+    description: "This project was done as part of the FreeCodeCamp course. I learned about checking for different conditions based on user actions."
+};
+timer = {
+    name: "Timer",
+    item_image: "../images/timer.png",
+    description: "This project stemmed from the discovery that the Google timer did not use the desktop notifications API. Therefore, my objective was to build a basic timer app that gave a desktop notification when the timer ended."
+};
+todo = {
+    name: "Todo",
+    item_image: "../images/todo.png",
+    description: "The Todo application does what is says on the tin. It further taught me lessons in javascript objects and storing data using the HTML5 localstorage property."
+};
+
 function create_portfolio_items(obj){
     // Get the ID of the portfolio container
     var portfolio_container = document.getElementById('portfolio');
     
     // Establishes the grid sizing
     var portfolioSizing = document.createElement('div');
-    portfolioSizing.classList.add('col s12 m7');
+    portfolioSizing.classList.add('col');
+    portfolioSizing.classList.add('s12');
+    portfolioSizing.classList.add('m7');
     
     // Makes the main card div where all the content exists
     var portfolioCardEl = document.createElement('div');
@@ -70,6 +104,12 @@ function create_portfolio_items(obj){
 }
 
 function init(){
+    create_portfolio_items(fridgemagnets);
+    create_portfolio_items(marid);
+    create_portfolio_items(randomquotegenerator);
+    create_portfolio_items(tictactoe);
+    create_portfolio_items(timer);
+    create_portfolio_items(todo);
 }
 
 window.onload = init();
