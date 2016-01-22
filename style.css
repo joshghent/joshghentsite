@@ -58,3 +58,11 @@ img.header-img {
 div#submit-button-container {
     border: none;
 }
+
+footer.footer-element {
+    background-color: #01B7FF;
+}
+
+button.blue-background {
+    background-color: #01B7FF;
+}
