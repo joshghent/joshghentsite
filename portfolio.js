@@ -62,11 +62,13 @@ function create_portfolio_items(obj){
     var portfolioSizing = document.createElement('div');
     portfolioSizing.classList.add('col');
     portfolioSizing.classList.add('s12');
-    portfolioSizing.classList.add('m7');
+    portfolioSizing.classList.add('m6');
+    portfolioSizing.classList.add('l4');
     
     // Makes the main card div where all the content exists
     var portfolioCardEl = document.createElement('div');
     portfolioCardEl.classList.add('card');
+    portfolioCardEl.classList.add('medium');
     
     // Creates the card image and title container
     var portfolioCardImageContainerEl = document.createElement('div');
@@ -79,6 +81,8 @@ function create_portfolio_items(obj){
     // Creates the title element and sets it to the objects name key
     var portfolioCardTitleEl = document.createElement('span');
     portfolioCardTitleEl.classList.add('card-title');
+    portfolioCardTitleEl.classList.add('grey-text');
+    portfolioCardTitleEl.classList.add('text-darken-4');
     portfolioCardTitleEl.innerHTML = obj.name;
     
     // Creates the description container
