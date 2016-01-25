@@ -1,0 +1,33 @@
+{
+  "name": "joshghentsite",
+  "version": "1.0.0",
+  "description": "The source code for joshghent.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshghent/joshghentsite.git"
+  },
+  "author": "Josh Ghent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshghent/joshghentsite/issues"
+  },
+  "homepage": "https://github.com/joshghent/joshghentsite#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-csslint": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^0.6.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-critical": "^0.2.0",
+    "grunt-inline": "^0.3.6",
+    "grunt-psi": "^0.1.3"
+  }
+}
