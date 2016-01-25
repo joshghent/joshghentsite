@@ -111,8 +111,8 @@ function create_portfolio_items(obj){
 function init(){
     create_portfolio_items(fridgemagnets);
     create_portfolio_items(marid);
-    create_portfolio_items(randomquotegenerator);
     create_portfolio_items(tictactoe);
+    create_portfolio_items(randomquotegenerator);
     create_portfolio_items(timer);
     create_portfolio_items(todo);
 }
