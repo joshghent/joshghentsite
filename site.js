@@ -16,4 +16,24 @@ $(document).ready(function(){
     $('#skill_html').animate({width: '70%'}, 250);
     $('#skill_css').animate({width: '45%'}, 250);
     $('#skill_sql').animate({width: '30%'}, 250);
+    
+    /* Contact Form */
+    var $contact_form = $('#contact-form');
+    $contact_form.submit(function(e){
+       e.preventDefault();
+       $.ajax({
+           url: '//formspree.io/me@joshghent.com',
+           method: 'POST',
+           data: $(this).serialize(),
+           dataType: 'json',
+           success: function(data){
+               $contact_form.trigger('reset');
+               Materialize.toast('Message Sent!', 1500);
+               
+           },
+           error: function(err){
+               Materialize.toast('Oops, there was an error, please try again later.', 1500);
+           }
+       }) 
+    });
 });
