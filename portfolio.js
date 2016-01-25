@@ -10,11 +10,11 @@
 /*
 END RESULT 
 
-        <div class="col s12 m7">
-          <div class="card">
+        <div class="col s12 m6 l4">
+          <div class="card medium">
             <div class="card-image">
               <img src="item_image">
-              <span class="card-title"> name </span>
+              <span class="card-title grey-text text-darken-4 card-title-background"> name </span>
             </div>
             <div class="card-content">
               <p>description</p>
