@@ -153,3 +153,9 @@ i.footer-icons-alignment {
 i.footer-detail-icons {
     font-size: 18px;
 }
+
+/* Fix for when portfolio items are not in a 3x2 grid on 1080, so basically on mobiles
+this class will allow for the background color to respond to the height of the content */
+.overflow {
+    overflow: auto;
+}
