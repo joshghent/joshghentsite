@@ -89,37 +89,19 @@ span.card-title-background {
 
 /* Taken from MaterializeCSS docs to change the color of inputs */
 
-
 /* label focus color */
 
-.input-field input[type=text]:focus + label {
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label {
     color: #01B7FF;
 }
 
 
 /* label underline focus color */
 
-.input-field input[type=text]:focus {
+.input-field input[type=text]:focus, .input-field input[type=email]:focus {
     border-bottom: 1px solid #01B7FF;
     box-shadow: 0 1px 0 0 #01B7FF;
 }
-
-
-/* valid color */
-
-.input-field input[type=text].valid {
-    border-bottom: 1px solid #01B7FF;
-    box-shadow: 0 1px 0 0 #01B7FF;
-}
-
-
-/* invalid color */
-
-.input-field input[type=text].invalid {
-    border-bottom: 1px solid #01B7FF;
-    box-shadow: 0 1px 0 0 #01B7FF;
-}
-
 
 /* icon prefix focus color */
 
