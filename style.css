@@ -118,7 +118,7 @@ p.footer-contact-details {
     padding-right: 10px;
 }
 
-p.footer-contact-details:hover {
+.footer-contact-details:hover, .social-links:hover {
     text-decoration: underline;
 }
 
