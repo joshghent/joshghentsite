@@ -28,6 +28,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-critical": "^0.2.0",
     "grunt-inline": "^0.3.6",
+    "grunt-penthouse": "^0.3.0",
     "grunt-psi": "^0.1.3"
   }
 }

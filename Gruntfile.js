@@ -13,8 +13,8 @@
 
 */
 
-module.exports = function(grunt){
-    
+module.exports = function(grunt) {
+
     grunt.initConfig({
         csslint: {
             strict: {
@@ -45,7 +45,7 @@ module.exports = function(grunt){
                 files: [{
                     expand: true,
                     cwd: '',
-                    src: 'style.css',
+                    src: ['style.css', 'critical.css'],
                     dest: '',
                     ext: '.min.css'
                 }]
@@ -97,6 +97,16 @@ module.exports = function(grunt){
                 }
             }
         },
+        penthouse: {
+            extract: {
+                outfile: 'critical.css',
+                css: 'style.css',
+                url: 'http://localhost:4000',
+                width: 1300,
+                height: 900,
+                skipErrors: false // this is the default
+            },
+        },
         watch: {
             css: {
                 files: ['style.css'],
@@ -106,6 +116,10 @@ module.exports = function(grunt){
                 files: ['index.html'],
                 tasks: ['htmlmin']
             },
+            dev: {
+                files: ['Gruntfile.js'],
+                tasks: ['psi', 'penthouse']
+            },
             options: {
                 livereload: {
                     host: '0.0.0.0',
@@ -113,7 +127,8 @@ module.exports = function(grunt){
             }
         }
     });
-    
+
+    grunt.loadNpmTasks('grunt-penthouse');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-psi');
@@ -123,5 +138,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.registerTask('default', ['csslint', 'cssmin', 'inline', 'htmlmin', 'imagemin', 'connect', 'psi']);
+    grunt.registerTask('default', ['csslint', 'cssmin', 'inline', 'htmlmin', 'imagemin', 'connect', 'penthouse', 'psi']);
 }
