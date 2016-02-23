@@ -21,22 +21,18 @@ module.exports = function(grunt) {
                 options: {
                     import: 2
                 },
-                src: ['style.css']
+                src: ['src/style.css']
             },
             lax: {
                 options: {
                     import: false
                 },
-                src: ['style.css']
+                src: ['src/style.css']
             }
         },
         inline: {
             dist: {
-                options: {
-                    uglify: true,
-                    htmlmin: true
-                },
-                src: 'index.html',
+                src: 'src/index.html',
                 dest: 'dist/index.html'
             }
         },
@@ -45,7 +41,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '',
-                    src: ['style.css', 'critical.css'],
+                    src: ['src/style.css', 'src/critical.css'],
                     dest: '',
                     ext: '.min.css'
                 }]
@@ -55,8 +51,15 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            target: {
-                src: '*.js'
+            options: {
+                beautify: true,
+                preserveComments: false
+            },
+            my_target: {
+                files: {
+                    'src/site.min.js': ['src/site.js'],
+                    'src/portfolio.min.js': ['src/portfolio.js']
+                }
             }
         },
         htmlmin: {
@@ -97,9 +100,9 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
+                    livereload: true,
                     port: 4000,
                     base: 'dist',
-                    keepalive: true,
                     hostname: '0.0.0.0'
                 }
             }
@@ -115,7 +118,6 @@ module.exports = function(grunt) {
             },
             myJpgs: {
                 options: {
-                    jpegMini: true,
                     imageAlpha: false,
                     quitAfter: true
                 },
@@ -131,8 +133,8 @@ module.exports = function(grunt) {
         },
         penthouse: {
             extract: {
-                outfile: 'critical.css',
-                css: 'style.css',
+                outfile: 'src/critical.css',
+                css: 'src/style.css',
                 url: 'http://localhost:4000',
                 width: 1300,
                 height: 900,
@@ -140,29 +142,24 @@ module.exports = function(grunt) {
             },
         },
         watch: {
-            css: {
-                files: ['style.css'],
-                tasks: ['cssmin']
-            },
             html: {
-                files: ['index.html'],
+                files: ['src/*.html'],
                 tasks: ['htmlmin']
             },
-            dev: {
-                files: ['Gruntfile.js'],
-                tasks: ['psi', 'penthouse']
+            css: {
+                files: ['src/*.css'],
+                tasks: ['cssmin', 'inline']
             },
-            options: {
-                livereload: {
-                    host: '0.0.0.0',
-                }
+            js: {
+                files: ['src/*.js'],
+                tasks: ['uglify', 'inline']     
             }
         }
     });
-
+    
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-penthouse');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-psi');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -172,6 +169,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.registerTask('default', ['csslint', 'cssmin', 'inline', 'htmlmin', 'imagemin', 'imageoptim', 'connect', 'penthouse', 'psi']);
-    grunt.registerTask('speed', ['cssmin', 'inline', 'htmlmin', 'connect']);
+    grunt.registerTask('speed', ['cssmin', 'uglify', 'inline', 'htmlmin', 'serve']);
     grunt.registerTask('images', ['imagemin', 'imageoptim']);
+    grunt.registerTask('serve', ['connect:server', 'watch']);
 }

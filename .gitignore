@@ -3,3 +3,5 @@ reports/
 style.min.css
 critical.min.css
 dist/
+portfolio.min.js
+site.min.js
