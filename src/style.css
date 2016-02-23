@@ -134,11 +134,11 @@ this class will allow for the background color to respond to the height of the c
     color: black;
 }
 
-#portfolio.card {
+#portfolio > .card {
     transition: all .2s ease-in-out;
 }
 
-#portfolio.card:hover {
+#portfolio > .card:hover {
     transform: scale(1.05);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
