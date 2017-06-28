@@ -6,12 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript">
             var host = "joshghent.com";
-            var subdomain = document.location.host.split('.')[0];
-
-            if (subdomain === 'blog') {
-                window.location = 'https://medium.com/josh-ghents-blog';
-            }
-
             if ((host == window.location.host) && (window.location.protocol != "https:")) {
                 window.location.protocol = "https";
             }
